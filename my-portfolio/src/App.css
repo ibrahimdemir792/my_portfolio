@@ -1,0 +1,287 @@
+:root {
+  --primary-color: #333333;
+  --secondary-color: #666666;
+  --background-color: #f8f8f8;
+  --text-color: #333333;
+  --card-background: #ffffff;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.App {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  background-color: var(--card-background);
+  color: var(--text-color);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--primary-color);
+  margin-bottom: 30px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 20px;
+  object-fit: cover;
+  border: 2px solid var(--primary-color);
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 25px;
+}
+
+nav ul li a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: var(--secondary-color);
+}
+
+section {
+  margin: 2rem 0;
+  background-color: var(--card-background);
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--secondary-color);
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.project {
+  background-color: var(--background-color);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.project-image {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  margin-right: 20px;
+  border-radius: 5px;
+}
+
+.project-content {
+  flex: 1;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input, textarea {
+  margin-bottom: 1rem;
+  padding: 0.8rem;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+button {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 0.8rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+button:hover {
+  background-color: var(--secondary-color);
+}
+
+footer {
+  text-align: center;
+  margin-top: 3rem;
+  padding: 1rem;
+  background-color: var(--primary-color);
+  color: #fff;
+  border-radius: 20px;
+}
+
+.certificate {
+  background-color: var(--background-color);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.certificate-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-right: 20px;
+  border-radius: 5px;
+}
+
+.certificate-content {
+  flex: 1;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.skill-button {
+  display: flex;
+  align-items: center;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+.skill-button:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.skill-logo {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  object-fit: contain;
+}
+
+/* New grid container styles */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background-color: var(--card-background);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4);
+}
+
+.card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  transition: all 0.3s ease;
+}
+
+.card:hover .card-image {
+  filter: brightness(90%);
+}
+
+.card-content {
+  padding: 15px;
+  transition: all 0.3s ease;
+}
+
+.card:hover .card-content {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.card h3 {
+  margin-top: 0;
+  color: var(--primary-color);
+  transition: all 0.4s ease;
+}
+
+.card:hover h3 {
+  color: var(--secondary-color);
+}
+
+.card p {
+  font-size: 14px;
+  color: var(--secondary-color);
+  transition: all 0.4s ease;
+}
+
+.card:hover p {
+  color: var(--primary-color);
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.4s ease;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.card:hover a {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Remove the old project and certificate styles */
+.project, .certificate {
+  display: none;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ... (rest of the styles remain the same) */
