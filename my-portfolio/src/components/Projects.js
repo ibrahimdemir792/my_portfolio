@@ -14,7 +14,7 @@ const Projects = () => (
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
-      <h2>Very First Projects</h2>
+      <h2>Very First Local Projects</h2>
       <div className="grid-container">
         {[
           { title: 'Social Network App', description: 'Twitter clone built with React for the frontend and Django for the backend', image: networkAppImage, href: 'https://github.com/ibrahimdemir792/cs50w/tree/main/week4_sql/commerce' },
