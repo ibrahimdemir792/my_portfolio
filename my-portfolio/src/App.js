@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Header from './components/Header';
+import Navigation from './components/Navigation';
 import About from './components/About';
 import Projects from './components/Projects';
 import Certificates from './components/Certificates';
@@ -25,7 +26,7 @@ const pageVariants = {
 const pageTransition = {
   type: 'tween',
   ease: 'anticipate',
-  duration: 1.2
+  duration: 1.0
 };
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
       transition={pageTransition}
     >
       <Header />
+      <Navigation />
       <main>
         <About />
         <Projects />

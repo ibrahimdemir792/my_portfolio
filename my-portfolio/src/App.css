@@ -26,10 +26,11 @@ header {
   color: var(--text-color);
   padding: 1rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   border-bottom: 2px solid var(--primary-color);
   margin-bottom: 30px;
+  border-radius: 20px;
 }
 
 .header-left {
@@ -285,3 +286,63 @@ footer {
 }
 
 /* ... (rest of the styles remain the same) */
+
+@keyframes wave {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(14deg); }
+  20% { transform: rotate(-8deg); }
+  30% { transform: rotate(14deg); }
+  40% { transform: rotate(-4deg); }
+  50% { transform: rotate(10deg); }
+  60% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.emoji-wave {
+  display: inline-block;
+  transition: transform 0.3s ease-in-out;
+}
+
+.emoji-wave.wave {
+  animation: wave 1.5s ease-in-out;
+}
+
+/* New styles for the main navigation */
+.main-navigation {
+  background-color: var(--card-background);
+  padding: 1rem;
+  margin-bottom: 30px;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.main-navigation ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.main-navigation ul li {
+  margin: 0 15px;
+}
+
+.main-navigation ul li a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+}
+
+.main-navigation ul li a:hover {
+  color: rgb(0, 0, 0);
+}
+
+/* Update header styles */
+header {
+  justify-content: center;
+}
+
+/* ... (rest of the styles remain the same) ... */

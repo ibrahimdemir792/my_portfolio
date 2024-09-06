@@ -3,12 +3,29 @@ import { motion } from 'framer-motion';
 import ScrollAnimation from './ScrollAnimation';
 
 const Contact = () => {
-  const [formStatus, setFormStatus] = useState('');
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const [status, setStatus] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Add your form submission logic here
-    setFormStatus('Thanks for your message!');
+    setStatus('Sending...');
+
+    const response = await fetch('/.netlify/functions/sendEmail', {
+      method: 'POST',
+      body: JSON.stringify({ name, email, message })
+    });
+
+    const result = await response.json();
+    if (response.ok) {
+      setStatus('Message sent successfully!');
+      setName('');
+      setEmail('');
+      setMessage('');
+    } else {
+      setStatus('Failed to send message. Please try again.');
+    }
   };
 
   return (
@@ -32,7 +49,7 @@ const Contact = () => {
             Send
           </motion.button>
         </motion.form>
-        {formStatus && <p>{formStatus}</p>}
+        {status && <p>{status}</p>}
       </motion.section>
     </ScrollAnimation>
   );
